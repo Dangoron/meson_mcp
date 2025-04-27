@@ -1,4 +1,8 @@
 {
+  "name": "@demcp/meson-mcp",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": "./main.ts",
   "tasks": {
     "dev": "deno run --watch main.ts",
     "start": "deno run main.ts --allow-env --allow-net --allow-read"
