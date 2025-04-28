@@ -1,0 +1,29 @@
+name: demcp_meson_mcp
+description: "Meson MCP"
+version: 1.0.0
+model: stdio
+mcp_config:
+  environment:
+    OPENAI_API_KEY: ak_576236c2901fab63b6a5da1e309738dd
+    OPENAI_API_BASE: https://oai.max-api.com/v1
+    OPENAI_MODEL: gpt-4o
+    OPENAI_TEMPERATURE: 0.0
+  tools:
+    - name: MESON_PRIVATE_KEY
+      description: "The private key of the Meson account"
+      type: string
+    - name: MESON_PUBLIC_KEY
+      description: "The public key of the Meson account"
+      type: string
+    - name: MESON_ADDRESS
+      description: "The address of the Meson account"
+      type: string
+start_config:
+  command: "npx"
+  args:
+    - "deno"
+    - "run"
+    - "--allow-env"
+    - "--allow-net"
+    - "--allow-read"
+    - "jsr:@demcp/meson-mcp"
