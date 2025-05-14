@@ -2,6 +2,12 @@ name: demcp_meson_mcp
 description: "Meson MCP"
 version: 1.0.0
 model: stdio
+env:
+  - name: "env_name(require)"
+    description: "env_des (require)"
+    type: "string(require)"
+    source_url: "get_env_source"
+    require: true(require)
 mcp_config:
   tools:
     - name: MESON_PRIVATE_KEY
